@@ -3,13 +3,13 @@ name: docker-build-push
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
     tags:
       - '*'
 
   pull_request:
     branches:
-      - 'main'
+      - 'master'
 
   workflow_dispatch:
 
@@ -40,7 +40,7 @@ jobs:
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
 
           # Use Docker `latest` tag convention
-          [ "$VERSION" == "main" ] && VERSION=latest
+          [ "$VERSION" == "master" ] && VERSION=latest
 
           VERSION=$VERSION
           IMAGE_ID=$IMAGE_ID
