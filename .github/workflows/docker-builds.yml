@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: "helm"
+  IMAGE_NAME: "${{ github.ref }}"
 
 jobs:
   docker:
