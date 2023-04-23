@@ -1,7 +1,7 @@
 FROM alpine:3.15.0
 
 ENV KUBE_VERSION="v1.21.2"
-ENV HELM_VERSION="v3.7.0"
+ENV HELM_VERSION="v3.11.1"
 ENV ARCH="arm64"
 
 RUN apk add bash wget ca-certificates nano
